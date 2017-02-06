@@ -1,40 +1,35 @@
 "use strict"
 class Animal {
-  constructor (jenis){
-    this.jenis = jenis
+  constructor (name, kaki){
+    this.name = name
+    this.kaki = 4
+  }
+  get Animal(){
+    console.log(`name animal = ${this.name} jumlah kaki = ${this.kaki}`);
+    return this
   }
 }
 
-class Amphibian extends Animal{
-  constructor (jenis, is_warm_blooded){
-    super (jenis)
-    this.is_warm_blooded = is_warm_blooded
-  }
-}
-
-class Frog extends  Amphibian{
-  constructor(jenis, is_warm_blooded, warna){
-    super (jenis, is_warm_blooded)
+class Fox extends Animal{
+  constructor (name, kaki, warna, power){
+    super (name, kaki)
     this.warna = warna
+    this.power = new Power()
   }
 }
 
-class SuperPowerFrog extends Frog{
-  constructor(jenis, is_warm_blooded, warna, kekuatan){
-  super (jenis, is_warm_blooded, warna)
-  this.kekuatan = kekuatan
+
+class Power {
+  constructor() {
   }
 
-  power(){
-    this.kekuatan = "Kage bunshin no jutsu"
-    return `jenis : ${this.jenis}, Berdarah Hangat : ${this.is_warm_blooded}, Warna: ${this.warna}, kekuatan: ${this.kekuatan}`
+  firstskill() {
+    return 'Super Power: Kage bunshin no jutsu'
   }
-
 }
 
-
-var xxx = new SuperPowerFrog('Kodok Naruoto', 'Tidak','Hitam')
-console.log(xxx.power())
-
-var vvv = new SuperPowerFrog('Kodok Sasuke', 'Tidak','Putih')
-console.log(vvv.power())
+let fox = new Fox('Fox', '' ,'Hitam')
+console.log(`Name : ${fox.name}`);
+console.log(`Kaki : ${fox.kaki}`);
+console.log(`Warna : ${fox.warna}`);
+console.log(`${fox.power.firstskill()}`);
