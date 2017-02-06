@@ -24,8 +24,8 @@ class Mammals extends Animal {
   }
 }
 
-console.log(animal.num_legs) // ini akan menghasilkan num_legs pada class animal = 2
 let animal = new Animal('Fox', 'Darwin Fox', 4)
+console.log(animal.num_legs) // ini akan menghasilkan num_legs pada class animal = 2
 let fox = new Mammals()
 
 /**
