@@ -33,7 +33,7 @@ class Carnivore extends Mammal {
 class Cat extends Carnivore{
   constructor(component){
     super(component)
-    this.smart = true
+    this.smartAss = true
   }
 }
 
@@ -41,14 +41,16 @@ class SuperPoweredCat extends Cat{
   constructor(component){
     super(component)
     this.superPower = "Cuteness overload"
+    this.abilty = component['ability']
   }
 }
 
-let MoonCat = {
+let superMoonCat = {
   'nameofAnimal' : 'Cat',
   'isWarmBlood'  : 'Yes',
-  'numOflegs'    : 4
+  'numOflegs'    : 4,
+  'ability'      : 'Control magnetic feilds'
 }
-var superCat = new SuperPoweredCat(MoonCat)
+var superCat = new SuperPoweredCat(superMoonCat)
 
 console.log(superCat)
