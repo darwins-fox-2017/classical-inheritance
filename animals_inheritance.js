@@ -35,7 +35,7 @@ class SuperPowered {
 	}
 
 	user_laser_vision() {
-		return 'Jenis Hewan :  Dilindungi'
+		return 'Jenis Hewan :  Dilindungi loh'
 	}
 }
 
