@@ -5,9 +5,9 @@ class Animal {
     this._age = 0;
   }
 
-  get getAge(){return this.age}
+  get age(){return this._age}
 
-  set setAge(valAge){
+  set age(valAge){
     if(valAge < 0){
       console.log(`Animal ${this.name} fiktif`);
     }
@@ -25,13 +25,13 @@ class Mammal extends Animal {
     super(name, age);
     this._numLegs = 2;
   }
-  get getNumLegs(){return this._numLegs}
+  get numLegs(){return this._numLegs}
 
-  set setNumLegs(valLegs){
-    if (valLegs < this._numLegs && valLegs > 4) {
+  set numLegs(valLegs){
+    if (valLegs < this._numLegs || valLegs > 4) {
       console.log(`Animal ${this.name} fiktif`);
     }
-    this.numLegs = valLegs;
+    this._numLegs = valLegs;
   }
   resultMammal(valMmmal){
     super.resultAnimal();
@@ -63,6 +63,7 @@ class SuperPowered extends fox{
 
 var result      = new fox("CrossFox");
 var resultSkill = new SuperPowered()
-result._numLegs = 4;
+result.numLegs = 1;
+result.age = -1
 result.resultFox();
 resultSkill.skill();
